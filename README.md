@@ -1,30 +1,27 @@
-# 🎓 Smart Attendance System using Face Recognition
+# 🎓 Smart Attendance System
 
-## 📌 Overview
-
-The Smart Attendance System is an AI-based application that automates attendance marking using real-time face recognition. It eliminates manual attendance processes and improves efficiency, accuracy, and reliability.
+A **Face Recognition-based Smart Attendance System** built using **Python, OpenCV, and Flask**. This project automates attendance marking by detecting and recognizing faces, storing records in a CSV file, and displaying them through a modern web interface.
 
 ---
 
 ## 🚀 Features
 
-* ✅ Real-time face detection and recognition
-* ✅ Automatic attendance marking with date & time
-* ✅ CSV-based attendance storage
-* ✅ 🔊 Beep sound confirmation
-* ✅ ❌ Unknown face detection
-* ✅ ➕ Add new student dynamically (Press **N**)
-* ✅ User-friendly interface with bounding boxes
+* 👤 **Face Detection & Recognition**
+* 📊 **Automatic Attendance Marking (CSV)**
+* 🌐 **Flask Web Dashboard**
+* 🕒 **Real-time Date & Time Logging**
+* 📁 **Image Dataset Support**
+* 🎯 **Live Webcam Detection**
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Python
-* OpenCV
-* face_recognition (dlib-based)
-* NumPy
-* OS & Datetime
+* **Python**
+* **OpenCV**
+* **Flask**
+* **HTML / CSS**
+* **CSV**
 
 ---
 
@@ -33,98 +30,105 @@ The Smart Attendance System is an AI-based application that automates attendance
 ```
 SmartAttendance/
 │
-├── images/              # Student images
-├── attendance.csv       # Attendance records
-├── main.py              # Main code
-├── working_demo.png     # Screenshot
+├── backend/
+│   ├── app.py
+│   ├── templates/
+│   │   └── index.html
+│
+├── images/
+├── attendance.csv
+├── main.py
+├── screenshot.png
 ├── README.md
+└── REPORT.md
 ```
 
 ---
 
-## ⚙️ Installation
+## ⚙️ How It Works
 
-1. Clone repository:
+1. The webcam captures the user's face.
+2. OpenCV processes and detects the face.
+3. The system matches it with stored images.
+4. If matched:
+
+   * Name is displayed
+   * Attendance is saved in CSV
+5. Data is shown in the dashboard.
+
+---
+
+## 📸 Project Demo
+
+![Smart Attendance Demo](screenshot.png)
+
+---
+
+## ▶️ How to Run
+
+### 1. Clone Repository
 
 ```
-git clone https://github.com/ANI2423/SmartAttendance.git
+git clone https://github.com/your-username/SmartAttendance.git
 cd SmartAttendance
 ```
 
-2. Install dependencies:
+### 2. Install Dependencies
 
 ```
-pip install opencv-python face-recognition numpy
+pip install opencv-python flask numpy
 ```
 
----
-
-## ▶️ Run the Project
+### 3. Run Face Detection
 
 ```
 python main.py
 ```
 
----
+### 4. Run Web App
 
-## 🎮 Controls
+```
+cd backend
+python app.py
+```
 
-| Key | Function        |
-| --- | --------------- |
-| N   | Add new student |
-| Q   | Quit system     |
+### 5. Open Browser
 
----
-
-## 🧠 Working Principle
-
-* Webcam captures real-time video
-* Face detection & encoding
-* Matches with stored images
-* Marks attendance in CSV
-* Plays beep sound on success
-* Allows dynamic student addition
-
----
-
-## 📸 Working Demo
-
-![Working Screenshot](working_demo.png)
+```
+http://127.0.0.1:5000/
+```
 
 ---
 
 ## 📊 Sample Output
 
 ```
-ANIRUDDHA,2026-03-26,10:32:15
-RAHUL,2026-03-26,10:35:02
+Name, Date, Time
+Aniruddha, 2026-03-31, 11:15 AM
 ```
 
 ---
 
-## ⚠️ Limitations
+## 🔮 Future Improvements
 
-* Depends on lighting conditions
-* Requires clear face images
-* Accuracy may reduce with angle variations
-
----
-
-## 🔮 Future Scope
-
-* GUI-based system
-* Cloud/database integration
-* Mask detection
-* Mobile app support
+* 🔐 Login System
+* ☁️ Database Integration
+* 📱 Mobile UI
+* 🎯 Deep Learning Face Recognition
+* 📊 Analytics Dashboard
 
 ---
 
 ## 👨‍💻 Author
 
-Aniruddha Thorat
-Computer Vision BYOP Project
+**Aniruddha Thorat**
 
 ---
+
+## 📜 License
+
+This project is for educational purposes.
+
 
 ## ⭐ Conclusion
 
