@@ -58,12 +58,6 @@ SmartAttendance/
 
 ---
 
-## 📸 Project Demo
-
-![Smart Attendance Demo](screenshot.png)
-
----
-
 ## ▶️ How to Run
 
 ### 1. Clone Repository
